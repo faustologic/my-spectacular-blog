@@ -1,6 +1,6 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](publi/wireframes/desktopView.jpeg)
+![](public/wireframes/desktopView.jpeg)
 ![](public/wireframes/tabletView.jpeg)
 ![](public/wireframes/mobileView.jpeg)
 
