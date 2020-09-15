@@ -1,8 +1,8 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-![](wireframes/desktopView.jpeg)
-![](wireframes/tabletView.jpeg)
-![](wireframes/mobileView.jpeg)
+![](publi/wireframes/desktopView.jpeg)
+![](public/wireframes/tabletView.jpeg)
+![](public/wireframes/mobileView.jpeg)
 
 ## Available Scripts
 
