@@ -12,7 +12,6 @@ function NewBlogPost() {
             type="text"
             placeholder="My post title"
           />
-          <button className="newBlogPost__savePost">Save Post</button>
           <input
             className="newBlogPost__message"
             type="text"
@@ -24,8 +23,13 @@ function NewBlogPost() {
             placeholder="E-mail"
           />
           <small className="newBlogPost__attachImage">Adjuntar imagen...</small>
-          <button className="newBlogPost__uploadImage">Upload Image</button>
+          <button className="newBlogPost__uploadImageButton">
+            Upload Image
+          </button>
         </form>
+      </div>
+      <div className="newBlogPost__right">
+        <button className="newBlogPost__savePostButton">Save Post</button>
       </div>
     </div>
   );
