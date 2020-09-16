@@ -22,10 +22,7 @@ function NewBlogPost() {
             type="email"
             placeholder="E-mail"
           />
-          <small className="newBlogPost__attachImage">Adjuntar imagen...</small>
-          <button className="newBlogPost__uploadImageButton">
-            Upload Image
-          </button>
+          <input className="newBlogPost__attachImage" type="image" alt="" />
         </form>
       </div>
       <div className="newBlogPost__right">

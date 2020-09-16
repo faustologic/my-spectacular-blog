@@ -1,12 +1,11 @@
 .newBlogPost {
-  width: 50%;
+  width: 70%;
   height: auto;
   border: 2px solid black;
   margin: 20px 20px;
   text-align: left;
   padding: 20px 20px;
   border-radius: 10px;
-  align-items: center !important;
   display: grid;
   grid-template-columns: auto 100px;
   grid-template-rows: auto auto;
@@ -37,29 +36,26 @@
   margin: 5px 0;
 }
 .newBlogPost__attachImage {
-  display: grid;
-  font-size: 10px;
-  display: flex;
-  margin: 5px 0;
-}
-.newBlogPost__uploadImageButton {
-  background-color: lightgray;
   border-radius: 5px;
   border: 1px solid darkgray;
-  padding: 2px 5px;
-  margin: 5px 0;
-  display: flex;
+  padding: 3px 10px;
+  background-color: lightgray;
+  display: grid;
+  margin-top: 10px;
 }
 
 .newBlogPost__right {
   display: flex;
   width: 20%;
   float: right;
+  align-items: center;
+  margin-bottom: 125px;
 }
 
 .newBlogPost__savePostButton {
   background-color: lightgray;
   border-radius: 5px;
   border: 1px solid darkgray;
-  padding: 3px 10px;
+  padding: 3px 20px;
+  white-space: nowrap;
 }
