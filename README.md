@@ -1,72 +1,44 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Desarrollo de E-commerce
 
-![](public/wireframes/desktopView.jpeg)
-![](public/wireframes/tabletView.jpeg)
-![](public/wireframes/mobileView.jpeg)
+## Herramientas
+ 
+* PHP, MySQL, Javascript y librerías preferidas, HTML, CSS, Git, XML.
 
-## Available Scripts
+## Desarrollo
 
-In the project directory, you can run:
+* Construir un pequeño módulo de Magento 2 que tenga la funcionalidad de un blog, este consistirá sólo de una página responsive. 
+* La estructura de la página y la información a mostrarse se pueden apreciar en los wireframes wf1.jpg, wf2.jpg, wf3.jpg. Los wireframes también indican los viewports que deben ser implementados.
 
-### `npm start`
+En este blog de una página debe existir un form para guardar nuevos posts sin refrescar el navegador. La página debe mostrar todos los posts ordenados desde el más reciente hasta el más antiguo.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Si el usuario refresca la página la información ya guardada debe mantenerse preservada.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+El form debe tener los siguientes campos:
+* Título
+* Contenido
+* Imagen
+* Dirección de email
 
-### `npm test`
+No podría ser posible guardar el post si:
+* La dirección de email está vacía o es inválida
+* El título está vacío
+* Ambos el contenido y la imagen están vacíos
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+En caso de un error de validación el usuario debe recibir feedback del error y el post no debe guardarse. Mientras el form se envía el usuario debe ser informado de que un proceso está sucediendo, provea algún feedback animado.
 
-### `npm run build`
+Después de enviar el post el backend PHP hará otra ronda de validación:
+* Verificará que la dirección de email es igual a la dirección de email de algún usuario con el rol de Administrador de Magento
+* El post fue enviado desde una fuente autorizada, es decir, el frontend del blog
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Después de que el post ha sido validado
+* Agregarle un timestamp
+* Crear el markup frontend del post que será regresado a la página del blog
+* Mostrar el post en el frontend como el más reciente
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+Desde el panel de administración de Magento
+* Deben visualizarle los posts existentes
+* Los posts deben poder ser eliminados
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Crear historia de commits Git concisa y documentada. Cuando el desarrollo esté culminado crear un Merge Request para notificar a nuestro equipo técnico de que su prueba esta lista para ser evaluada. Sólo es necesario versionar el directorio correspondiente al módulo y no el sistema Magento entero. La extensión debe ser autoinstalable con el comando "magento setup:upgrade".
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+* Construir el feedback para el envío del post solo con CSS
