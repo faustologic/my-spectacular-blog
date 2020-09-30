@@ -1,4 +1,5 @@
 import React from "react";
+import BlogCreated from "../BlogCreated/BlogCreated";
 import Header from "../Header/Header";
 import NewBlogPost from "../NewBlogPost/NewBlogPost";
 import "./Home.css";
@@ -11,11 +12,7 @@ function Home() {
       </div>
       <div className="home__container">
         <NewBlogPost />
-      </div>
-      <div className="home__column">
-        {/* BlogCreated */}
-        {/* BlogCreated */}
-        {/* BlogCreated */}
+        {/* <BlogCreated /> */}
       </div>
     </div>
   );

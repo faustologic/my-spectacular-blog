@@ -1,18 +1,27 @@
 import React from "react";
+import "./BlogCreated.css";
 
-class BlogCreated extends Component {
-  state = {
-    title: "",
-    description: "",
-  };
-  render() {
-    return (
-      <div className="blogCreated">
-        <h3>{this.state.title}</h3>
-        <p>{this.state.description}</p>
+const blogInfo = {
+  title: "",
+  description: "",
+  date: "",
+  author: {
+    name: "",
+    avatarURL: "",
+  },
+};
+
+function BlogCreated(props) {
+  return (
+    <div className="blogCreated">
+      <div className="blogCreated__title">
+        <h3>{this.props.title}</h3>
       </div>
-    );
-  }
+      <div className="blogCreated__description">
+        <p>{this.props.description}</p>
+      </div>
+    </div>
+  );
 }
 
 export default BlogCreated;
