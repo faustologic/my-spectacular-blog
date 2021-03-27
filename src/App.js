@@ -1,13 +1,12 @@
 import React from "react";
-import "./App.css";
-import Home from "./Home/Home";
+import Header from "./Components/Header/header";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <Home />
-    </div>
+    <React.Fragment>
+      <Header />
+    </React.Fragment>
   );
-}
+};
 
 export default App;
