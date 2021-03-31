@@ -1,11 +1,12 @@
 import React from "react";
 import Form from "../Form/Form";
+import Posts from "../Posts/Posts";
 
 const Home = () => {
   return (
     <React.Fragment>
       <Form />
-      <h2>Aqui van los posts</h2>
+      <Posts />
     </React.Fragment>
   );
 };

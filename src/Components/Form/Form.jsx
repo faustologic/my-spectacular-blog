@@ -13,6 +13,11 @@ const Form = () => {
     selectedFile: "",
   });
   const classes = useStyles();
+
+  const handleSubmit = () => {
+    return console.log("blog publicado!");
+  };
+
   return (
     <Paper className={classes.paper} elevation={3}>
       <form className={`${classes.root} ${classes.form}`}>
@@ -47,7 +52,11 @@ const Form = () => {
           />
         </div>
 
-        <Button className={classes.buttonSubmit} variant="contained">
+        <Button
+          className={classes.buttonSubmit}
+          variant="contained"
+          onClick={handleSubmit}
+        >
           Save Post
         </Button>
       </form>
