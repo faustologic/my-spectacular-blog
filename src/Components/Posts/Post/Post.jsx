@@ -6,17 +6,19 @@ import {
   Button,
   Typography,
 } from "@material-ui/core";
-import moment from "moment";
+// import moment from "moment";
 
 const Post = (post) => {
   return (
     <Card>
-      <CardMedia image={post.selectedFile} title={post.title} />
+      <CardMedia />
       <CardContent>
+        <Typography variant="h6">{post.title}</Typography>
         <Typography variant="body1">
           Contenido del blog, bla bla bla...
         </Typography>
       </CardContent>
+      <Button variant="contained">Guardar Post</Button>
     </Card>
   );
 };

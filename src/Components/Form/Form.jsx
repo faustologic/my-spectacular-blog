@@ -14,13 +14,14 @@ const Form = () => {
   });
   const classes = useStyles();
 
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     return console.log("blog publicado!");
   };
 
   return (
     <Paper className={classes.paper} elevation={3}>
-      <form className={`${classes.root} ${classes.form}`}>
+      <form autoComplete="off" className={`${classes.root} ${classes.form}`}>
         <Typography variant="h5" className={classes.typography}>
           New Blog Post
         </Typography>
@@ -29,18 +30,23 @@ const Form = () => {
           label="My Post Title"
           variant="outlined"
           fullWidth
+          onChange={(e) => setPostData({ ...postData, title: e.target.value })}
         />
         <TextField
           name="message"
           label="My Message"
           variant="outlined"
           fullWidth
+          onChange={(e) =>
+            setPostData({ ...postData, message: e.target.value })
+          }
         />
         <TextField
           name="email"
           label="Email Address"
           variant="outlined"
           style={{ width: "50%" }}
+          onChange={(e) => setPostData({ ...postData, email: e.target.value })}
         />
         <div className={classes.fileInput}>
           <FileBase
